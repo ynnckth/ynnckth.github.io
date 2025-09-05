@@ -16,7 +16,7 @@
     <!-- <link rel="stylesheet" href="css/themes/indigo-white.css">-->
 	<!-- <link rel="stylesheet" href="css/themes/green-white.css"> -->
 	<!-- <link rel="stylesheet" href="css/themes/red-white.css"> -->
-	 <link rel="stylesheet" href="css/themes/grey-white.css">
+	 <link rel="stylesheet" href="css/themes/dark.css">
 	<!-- <link rel="stylesheet" href="css/themes/white-indigo.css"> -->
 	<!-- <link rel="stylesheet" href="css/themes/white-blue.css"> -->
     <!-- <link rel="stylesheet" href="css/themes/white-grey.css">-->
@@ -25,7 +25,7 @@
 </head>
 <body>
 	<main>
-		<div class="intro">Hello, I'm Yannick!</div>
+		<div class="intro" id="easter-egg">Hi, I'm Yannick!</div>
 		<div class="tagline">Fullstack Dev | DevOps Enthusiast | Creative Coder | Fullstack Musician</div>
 		<!-- Find your icons from here - https://fontawesome.com/icons?d=gallery&s=brands -->
 		<div class="icons-social">
@@ -47,5 +47,15 @@
 	  </a>
     </div>
 	</main>
+	<script>
+		document.getElementById('easter-egg').addEventListener('click', () => {
+			// Prevent loading multiple instances
+			if (document.querySelector('canvas#asteroids')) return;
+			const script = document.createElement('script');
+			script.src = 'asteroids.js';
+			script.type = 'text/javascript';
+			document.body.appendChild(script);
+		});
+	</script>
 </body>
 </html>
