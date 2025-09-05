@@ -22,11 +22,24 @@
     <!-- <link rel="stylesheet" href="css/themes/white-grey.css">-->
 	<!-- <link rel="stylesheet" href="css/themes/white-red.css"> -->
 	<!-- <link rel="stylesheet" href="css/themes/yellow-black.css"> -->
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.js"></script>
+	<style>
+		#p5-canvas {
+			display: flex;
+			justify-content: center;
+		}
+		canvas {
+  			display: block;
+			overflow: hidden;
+		}
+	</style>
 </head>
 <body>
 	<main>
-		<div class="intro" id="easter-egg">Hi, I'm Yannick!</div>
-		<div class="tagline">Fullstack Dev | DevOps Enthusiast | Creative Coder | Fullstack Musician</div>
+		<div id="p5-canvas"></div>
+		<!--<div class="intro">Hi, I'm Yannick!</div>-->
+		<div id="easter-egg" class="tagline">Fullstack Dev | DevOps Enthusiast | Creative Coder | Fullstack Musician</div>
 		<!-- Find your icons from here - https://fontawesome.com/icons?d=gallery&s=brands -->
 		<div class="icons-social">
 			<a target="_blank" href="https://github.com/ynnckth">
@@ -52,10 +65,12 @@
 			// Prevent loading multiple instances
 			if (document.querySelector('canvas#asteroids')) return;
 			const script = document.createElement('script');
-			script.src = 'asteroids.js';
+			script.src = 'js/asteroids.js';
 			script.type = 'text/javascript';
 			document.body.appendChild(script);
 		});
 	</script>
+	<script src="js/sketch.js"></script>
+    <script src="js/particle.js"></script>
 </body>
 </html>
