@@ -42,25 +42,25 @@ class Particle {
     }
   
     arrive(target) {
-      var desired = p5.Vector.sub(target, this.pos);
-      var d = desired.mag();
-      var speed = this.maxspeed;
+      const desired = p5.Vector.sub(target, this.pos);
+      const d = desired.mag();
+      const speed = this.maxspeed;
       if (d < 100) {
         speed = map(d, 0, 100, 0, this.maxspeed);
       }
       desired.setMag(speed);
-      var steer = p5.Vector.sub(desired, this.vel);
+      const steer = p5.Vector.sub(desired, this.vel);
       steer.limit(this.maxforce);
       return steer;
     }
   
     flee(target) {
-      var desired = p5.Vector.sub(target, this.pos);
-      var d = desired.mag();
+      const desired = p5.Vector.sub(target, this.pos);
+      const d = desired.mag();
       if (d < width) {
         desired.setMag(this.maxspeed);
         desired.mult(-1);
-        var steer = p5.Vector.sub(desired, this.vel);
+        const steer = p5.Vector.sub(desired, this.vel);
         steer.limit(this.maxforce);
         return steer;
       } else {
