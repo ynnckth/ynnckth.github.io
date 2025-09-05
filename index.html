@@ -33,11 +33,18 @@
   			display: block;
 			overflow: hidden;
 		}
+		.no-loupe {
+			-webkit-touch-callout: none; /* iOS specific */
+			-webkit-user-select: none;  /* Safari */
+			-moz-user-select: none;     /* Firefox */
+			-ms-user-select: none;      /* Internet Explorer/Edge */
+			user-select: none;          /* Standard */
+			}
 	</style>
 </head>
 <body>
 	<main>
-		<div id="p5-canvas"></div>
+		<div id="p5-canvas" class="no-loupe"></div>
 		<!--<div class="intro">Hi, I'm Yannick!</div>-->
 		<div id="easter-egg" class="tagline">Fullstack Dev | DevOps Enthusiast | Creative Coder | Fullstack Musician</div>
 		<!-- Find your icons from here - https://fontawesome.com/icons?d=gallery&s=brands -->
