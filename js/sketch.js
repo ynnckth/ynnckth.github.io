@@ -21,7 +21,7 @@ function setup() {
   }
 
   const points = font.textToPoints(renderedText, 0, 0, fontSize, {
-    sampleFactor: 0.3,
+    sampleFactor: 0.5,
   });
 
   textFont(font);
