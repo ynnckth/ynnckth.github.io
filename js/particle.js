@@ -44,7 +44,7 @@ class Particle {
     arrive(target) {
       const desired = p5.Vector.sub(target, this.pos);
       const d = desired.mag();
-      const speed = this.maxspeed;
+      let speed = this.maxspeed;
       if (d < 100) {
         speed = map(d, 0, 100, 0, this.maxspeed);
       }
